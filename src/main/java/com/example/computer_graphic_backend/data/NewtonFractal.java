@@ -3,8 +3,6 @@ package com.example.computer_graphic_backend.data;
 import java.awt.*;
 
 public class NewtonFractal extends Fractal {
-
-    private static final int MAX_ITER = 100;
     private static final double TOLERANCE = 1e-5;
     private final int zoom;
     private final int constant;
@@ -40,7 +38,7 @@ public class NewtonFractal extends Fractal {
                 Complex z = new Complex(real, imaginary);
                 int iteration = 0;
 
-                while (iteration < MAX_ITER) {
+                while (iteration < iterations) {
 
                     Complex f = function(z);
                     Complex fPrime = functionDerivative(z);
@@ -48,7 +46,7 @@ public class NewtonFractal extends Fractal {
                     z = z.subtract(f.divide(fPrime));
 
                     if (f.abs() < TOLERANCE) {
-                        int color = Color.HSBtoRGB((float) iteration / MAX_ITER, 1, 1);
+                        int color = Color.HSBtoRGB((float) iteration / iterations, 1, 1);
                         image.setRGB(x, y, color);
                         break;
                     }
@@ -59,8 +57,8 @@ public class NewtonFractal extends Fractal {
         }
     }
     private static class Complex {
-        private double real;
-        private double imag;
+        private final double real;
+        private final double imag;
 
         public Complex(double real, double imag) {
             this.real = real;
