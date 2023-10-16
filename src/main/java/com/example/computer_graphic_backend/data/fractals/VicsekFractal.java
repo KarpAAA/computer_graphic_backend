@@ -1,4 +1,4 @@
-package com.example.computer_graphic_backend.data;
+package com.example.computer_graphic_backend.data.fractals;
 
 import java.awt.*;
 

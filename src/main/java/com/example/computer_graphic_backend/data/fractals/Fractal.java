@@ -1,11 +1,9 @@
-package com.example.computer_graphic_backend.data;
+package com.example.computer_graphic_backend.data.fractals;
 
 import lombok.Data;
 
 import javax.imageio.ImageIO;
-import javax.swing.*;
 import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 

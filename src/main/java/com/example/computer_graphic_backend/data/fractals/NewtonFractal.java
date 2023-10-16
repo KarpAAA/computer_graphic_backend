@@ -1,4 +1,4 @@
-package com.example.computer_graphic_backend.data;
+package com.example.computer_graphic_backend.data.fractals;
 
 import java.awt.*;
 
@@ -46,7 +46,7 @@ public class NewtonFractal extends Fractal {
                     z = z.subtract(f.divide(fPrime));
 
                     if (f.abs() < TOLERANCE) {
-                        int color = Color.HSBtoRGB((float) iteration / iterations, 1, 1);
+                        int color = Color.HSBtoRGB((float)fPrime.imag,(float)fPrime.real,1);
                         image.setRGB(x, y, color);
                         break;
                     }

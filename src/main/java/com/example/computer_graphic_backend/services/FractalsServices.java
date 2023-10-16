@@ -1,9 +1,9 @@
 package com.example.computer_graphic_backend.services;
 
 
-import com.example.computer_graphic_backend.data.Fractal;
-import com.example.computer_graphic_backend.data.NewtonFractal;
-import com.example.computer_graphic_backend.data.VicsekFractal;
+import com.example.computer_graphic_backend.data.fractals.Fractal;
+import com.example.computer_graphic_backend.data.fractals.NewtonFractal;
+import com.example.computer_graphic_backend.data.fractals.VicsekFractal;
 import com.example.computer_graphic_backend.models.NewtonRequest;
 import com.example.computer_graphic_backend.models.ViscekRequest;
 import org.springframework.stereotype.Service;
@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.io.IOException;
 
 @Service
